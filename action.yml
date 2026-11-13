@@ -1,5 +1,5 @@
 name: Haxa
-description: Ask Haxa to film what a pull request changes, and to test it, when your workflow says so.
+description: "Ask Haxa to film what a pull request changes, and to test it, when your workflow says so."
 author: Haxa
 branding:
   icon: film
@@ -7,24 +7,24 @@ branding:
 
 inputs:
   pipeline:
-    description: What to run on the pull request: `demo`, `qa` or `both`.
+    description: "What to run on the pull request: `demo`, `qa` or `both`."
     default: both
   wait:
-    description: Wait for the runs to end, and give their pages to later steps.
+    description: "Wait for the runs to end, and give their pages to later steps."
     default: "false"
   dry-run:
-    description: Say what would start, and start nothing.
+    description: "Say what would start, and start nothing."
     default: "false"
   pull-request:
-    description: The pull request's number, for a workflow on an event that names none, such as `workflow_run` after CI.
+    description: "The pull request's number, for a workflow on an event that names none, such as `workflow_run` after CI."
     default: ""
   server:
-    description: The Haxa to ask.
+    description: "The Haxa to ask."
     default: https://haxa.dev
 
 outputs:
   run-urls:
-    description: The runs' pages, as a JSON array.
+    description: "The runs' pages, as a JSON array."
     value: ${{ steps.haxa.outputs.run-urls }}
 
 runs:
